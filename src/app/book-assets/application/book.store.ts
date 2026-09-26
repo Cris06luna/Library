@@ -20,10 +20,7 @@ export class BookStore {
   private booksSignal = signal<Book[]>([]);
   private loadingSignal = signal<boolean>(false);
 
-  /** Read-only signal containing the current books. */
   readonly books = this.booksSignal.asReadonly();
-
-  /** Read-only signal indicating whether books are being loaded. */
   readonly loading = this.loadingSignal.asReadonly();
 
   constructor(private bookApi: BookApi) {}
