@@ -1,0 +1,26 @@
+{
+  "toolbar": {
+    "title": "Explorador de Open Library",
+    "english": "EN",
+    "spanish": "ES"
+  },
+  "catalogue": {
+    "title": "Catálogo de Libros",
+    "categories": "Categorías de libros",
+    "softwareEngineering": "Ingeniería de Software",
+    "artificialIntelligence": "Inteligencia Artificial",
+    "loading": "Cargando libros..."
+  },
+  "bookCard": {
+    "author": "Autor",
+    "firstPublished": "Primera publicación",
+    "editions": "Ediciones",
+    "unknown": "Desconocido",
+    "details": "Detalles del libro",
+    "detailsAriaLabel": "Abrir detalles del libro en una nueva pestaña"
+  },
+  "footer": {
+    "copyright": "Copyright © 2026 Open Library. All rights reserved.",
+    "developedBy": "Desarrollado por"
+  }
+}

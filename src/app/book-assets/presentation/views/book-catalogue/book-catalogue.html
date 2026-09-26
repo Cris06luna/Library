@@ -1,0 +1,59 @@
+<section class="catalogue" aria-labelledby="catalogue-title">
+
+  <h1 id="catalogue-title">
+    {{ 'catalogue.title' | translate }}
+  </h1>
+
+  <div
+    class="category-buttons"
+    role="group"
+    [attr.aria-label]="'catalogue.categories' | translate"
+  >
+
+    <button
+      mat-raised-button
+      type="button"
+      [attr.aria-pressed]="selectedCategory === 'software engineering'"
+      (click)="selectCategory('software engineering')"
+    >
+      {{ 'catalogue.softwareEngineering' | translate }}
+    </button>
+
+    <button
+      mat-raised-button
+      type="button"
+      [attr.aria-pressed]="selectedCategory === 'artificial intelligence'"
+      (click)="selectCategory('artificial intelligence')"
+    >
+      {{ 'catalogue.artificialIntelligence' | translate }}
+    </button>
+
+  </div>
+
+  @if (loading()) {
+
+    <p
+      class="loading-message"
+      role="status"
+      aria-live="polite"
+    >
+      {{ 'catalogue.loading' | translate }}
+    </p>
+
+  } @else {
+
+    <div class="book-grid">
+
+      @for (book of books(); track book.key) {
+
+        <app-book-card
+          [book]="book"
+        />
+
+      }
+
+    </div>
+
+  }
+
+</section>
