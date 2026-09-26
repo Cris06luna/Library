@@ -1,0 +1,17 @@
+<mat-toolbar>
+
+  <img [src]="logoUrl" alt="Open Library">
+
+  <span>{{ 'toolbar.title' | translate }}</span>
+
+  <span class="spacer"></span>
+
+  <button mat-button (click)="changeLanguage('en')">
+    {{ 'toolbar.english' | translate }}
+  </button>
+
+  <button mat-button (click)="changeLanguage('es')">
+    {{ 'toolbar.spanish' | translate }}
+  </button>
+
+</mat-toolbar>

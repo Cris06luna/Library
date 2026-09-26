@@ -1,0 +1,46 @@
+<mat-card class="book-card">
+
+  <img
+    mat-card-image
+    [src]="coverUrl"
+    [alt]="book().title"
+  >
+
+  <mat-card-header>
+    <mat-card-title>
+      {{ book().title }}
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <p>
+      <strong>{{ 'bookCard.author' | translate }}:</strong>
+      {{ book().authors.join(', ') || ('bookCard.unknown' | translate) }}
+    </p>
+
+    <p>
+      <strong>{{ 'bookCard.firstPublished' | translate }}:</strong>
+      {{ book().firstPublishYear || ('bookCard.unknown' | translate) }}
+    </p>
+
+    <p>
+      <strong>{{ 'bookCard.editions' | translate }}:</strong>
+      {{ book().editionCount }}
+    </p>
+
+  </mat-card-content>
+
+  <mat-card-actions>
+    <a
+      mat-button
+      [href]="bookUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      [attr.aria-label]="'bookCard.detailsAriaLabel' | translate"
+    >
+      {{ 'bookCard.details' | translate }}
+    </a>
+  </mat-card-actions>
+
+</mat-card>
